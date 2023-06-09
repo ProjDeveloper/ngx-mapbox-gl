@@ -14,7 +14,8 @@
   "standard-version": {
     "scripts": {
       "postbump": "yarn update-version && yarn build",
-      "precommit": "git add libs/ngx-mapbox-gl/package.json"
+      "precommit": "git add libs/ngx-mapbox-gl/package.json",
+      "prepack": "yarn build"
     }
   },
   "lint-staged": {
