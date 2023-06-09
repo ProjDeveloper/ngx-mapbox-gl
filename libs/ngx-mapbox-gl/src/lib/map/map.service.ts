@@ -778,7 +778,7 @@ export class MapService {
 
   private removeMarkers() {
     for (const marker of this.markersToRemove) {
-      marker.remove();
+      marker?.remove();
     }
     this.markersToRemove = [];
   }
