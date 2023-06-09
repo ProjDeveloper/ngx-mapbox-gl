@@ -9,13 +9,13 @@
     "release": "standard-version -a",
     "update-version": "./update_version.sh",
     "deploy-showcase": "nx build showcase --base-href '/ngx-mapbox-gl/' && cp dist/apps/showcase/index.html dist/apps/showcase/404.html && gh-pages -d dist/apps/showcase",
-    "commit": "lint-staged --relative && cz --no-verify"
+    "commit": "lint-staged --relative && cz --no-verify",
+    "postinstall": "yarn build"
   },
   "standard-version": {
     "scripts": {
       "postbump": "yarn update-version && yarn build",
       "precommit": "git add libs/ngx-mapbox-gl/package.json",
-      "prepack": "yarn build"
     }
   },
   "lint-staged": {
